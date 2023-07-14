@@ -22,17 +22,13 @@ const App: React.FunctionComponent = () => {
   };
 
   const handleModalClose = () => {
+    setPhoneNumber('');
+    setCountrySelected(COUNTRIES[0]);
     setIsModalOpen(false);
   };
 
-  const handleCancel = () => {
-    setPhoneNumber('');
-    setCountrySelected(COUNTRIES[0]);
-    handleModalClose();
-  };
-
   const handleSave = () => {
-    handleModalClose();
+    setIsModalOpen(false);
     console.log('phoneNumber', phoneNumber);
     console.log('code', countrySelected.code);
   };
@@ -66,7 +62,7 @@ const App: React.FunctionComponent = () => {
           </Modal.Body>
           <Modal.Footer>
             <Flex justifyContent='flex-end'>
-              <Button variant='secondary' width={116} onClick={handleCancel}>
+              <Button variant='secondary' width={116} onClick={handleModalClose}>
                 Cancel
               </Button>
               <Button variant='primary' width={116} ml={6} onClick={handleSave}>
