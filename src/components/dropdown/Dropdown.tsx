@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Portal } from 'react-portal';
-import { Box, CenSpbtwRowFlex, ColFlex, Text, TextRegular } from '../../styled';
+import { Box, Flex, CenSpbtwRowFlex, ColFlex, Text, TextRegular } from '../../styled';
 import TitleStyled, { ArrowUp, ArrowDown, Image } from './styled/TitleStyled';
 import { IItem, IDropdownProps } from '../../types';
 
@@ -71,9 +71,9 @@ const Dropdown: React.FunctionComponent<IDropdownProps> = ({ list, onSelect, sel
                   fontSize={4}
                 >
                   <CenSpbtwRowFlex>
-                    <Box mr={5}>
+                    <Flex mr={5} alignItems='center'>
                       <Image src={item.flagUrl} alt='flag' />
-                    </Box>
+                    </Flex>
                     <TextRegular text={item.title} truncatable />
                   </CenSpbtwRowFlex>
                   <Text fontWeight={1}>{item.code}</Text>
