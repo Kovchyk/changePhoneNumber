@@ -29,8 +29,8 @@ const Dropdown: React.FunctionComponent<IDropdownProps> = ({ list, onSelect, sel
   return (
     <Box className='dd-wrapper'>
       <TitleStyled type='button' className='dd-header' onClick={toggleList} ref={titleRef}>
-        <Image src={selected.flagUrl} alt='flag' />
-        <div className='dd-header-title'>{selected.code}</div>
+        <Image src={selected?.flagUrl} alt='flag' />
+        <div className='dd-header-title'>{selected?.code}</div>
         {isListOpen ? <ArrowUp /> : <ArrowDown />}
       </TitleStyled>
       {isListOpen && (

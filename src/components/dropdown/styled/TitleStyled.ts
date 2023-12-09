@@ -55,6 +55,7 @@ export const Image = styled.img`
   border: ${({ theme }) => theme.border.grey};
   width: 22px;
   height: 16px;
+  object-fit: cover;
 `;
 
 export default TitleStyled;

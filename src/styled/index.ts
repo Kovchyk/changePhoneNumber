@@ -12,7 +12,7 @@ export const CenSpbtwRowFlex = styled(RowFlex)({
 
 export const Title1Bold = StyledText(6, 5, 2);
 export const BodySemibold = StyledText(2, 1, 1);
-export const TextRegular = StyledText(4, 1);
+export const TextRegular = StyledText(4, 2);
 
 export { Box } from './lib/Box/Box';
 export { Button } from './lib/Button';

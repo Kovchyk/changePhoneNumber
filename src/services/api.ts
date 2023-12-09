@@ -1,11 +1,9 @@
 import axios from 'axios';
 
-const API_KEY = '51a153ec495b1c0e7cbaac171a82fa26';
-
-axios.defaults.baseURL = 'https://api.countrylayer.com/v2';
+axios.defaults.baseURL = 'https://restcountries.com/v3.1';
 
 export function getCountries() {
-  return axios(`/all?access_key=${API_KEY}`).then((result: any) => result.data);
+  return axios('/alpha/?fields=name,flags,idd,ccn3&codes=pol,blr,ukr');
 }
 
 export default { getCountries };
