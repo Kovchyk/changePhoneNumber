@@ -27,7 +27,7 @@ const Dropdown: React.FunctionComponent<IDropdownProps> = ({ list, onSelect, sel
   }, [isListOpen]);
 
   return (
-    <Box className='dd-wrapper'>
+    <Box className='dd-wrapper' minWidth='106px'>
       <TitleStyled type='button' className='dd-header' onClick={toggleList} ref={titleRef}>
         <Image src={selected?.flagUrl} alt='flag' />
         <div className='dd-header-title'>{selected?.code}</div>

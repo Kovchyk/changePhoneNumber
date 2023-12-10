@@ -58,32 +58,30 @@ const App: React.FunctionComponent = () => {
       <Button size='large' variant='primary' onClick={handleModalOpen}>
         Open modal
       </Button>
-      {isModalOpen && (
-        <Modal isOpen={isModalOpen} onClickOutside={handleModalClose}>
-          <Modal.Header>
-            <Title1Bold text='Change phone number' />
-          </Modal.Header>
-          <Modal.Body>
-            <BodySemibold text='Provide new phone number' color='dark' ml={4} />
-            <Flex>
-              <Dropdown list={countries} onSelect={handleDropdownSelect} selected={countrySelected} />
-              <Box ml={5} flexGrow={1}>
-                <InputMask onChange={handleInputChange} initialValue={phoneNumber} />
-              </Box>
-            </Flex>
-          </Modal.Body>
-          <Modal.Footer>
-            <Flex justifyContent='flex-end'>
-              <Button variant='secondary' width={116} onClick={handleModalClose}>
-                Cancel
-              </Button>
-              <Button variant='primary' width={116} ml={6} onClick={handleSave}>
-                Save
-              </Button>
-            </Flex>
-          </Modal.Footer>
-        </Modal>
-      )}
+      <Modal isOpen={isModalOpen} onClickOutside={handleModalClose}>
+        <Modal.Header>
+          <Title1Bold text='Change phone number' />
+        </Modal.Header>
+        <Modal.Body>
+          <BodySemibold text='Provide new phone number' color='dark' ml={4} />
+          <Flex>
+            <Dropdown list={countries} onSelect={handleDropdownSelect} selected={countrySelected} />
+            <Box ml={5} flexGrow={1}>
+              <InputMask onChange={handleInputChange} initialValue={phoneNumber} />
+            </Box>
+          </Flex>
+        </Modal.Body>
+        <Modal.Footer>
+          <Flex justifyContent='flex-end'>
+            <Button variant='secondary' width={['50%', 116]} onClick={handleModalClose}>
+              Cancel
+            </Button>
+            <Button variant='primary' width={['50%', 116]} ml={6} onClick={handleSave}>
+              Save
+            </Button>
+          </Flex>
+        </Modal.Footer>
+      </Modal>
     </Flex>
   );
 };
