@@ -51,7 +51,7 @@ const InputMask: React.FunctionComponent<IInputMaskProps> = ({ initialValue, onC
     handleChange();
   }, [value]);
 
-  return <Input type='text' ref={inputRef} onChange={handleChange} placeholder='000-000-000' autoFocus />;
+  return <Input type='tel' ref={inputRef} onChange={handleChange} placeholder='000-000-000' autoFocus />;
 };
 
 export default InputMask;
